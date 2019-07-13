@@ -1,0 +1,28 @@
+{
+  "name": "mfbos_doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "element-ui": "^2.10.1",
+    "highlight.js": "^9.15.8",
+    "inputmask": "^3.3.11",
+    "less-loader": "^5.0.0",
+    "vue": "^2.5.2",
+    "vue-highlight.js": "^2.2.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
+    "less": "^3.9.0",
+    "vuepress": "^1.0.2"
+  }
+}
