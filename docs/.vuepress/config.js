@@ -7,12 +7,13 @@ function resolve (dir) {
 module.exports = {
     title: 'shotCat', //标题
     description: '小源科技 平台架构公共组件', //描述
-    base: '/shotCat/', //基本url
+    // base: '/shotCat/', //基本url
+    base: '/', //基本url
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
       ['link', { rel: 'icon', href: '/favicon.jpeg' }], // 增加一个自定义的 favicon
     ],
-    dest: './dist', //打包位置
+    // dest: './dist', //打包位置
     port: 6868, //端口号 谐音流弊流弊
     
     //主题配置

@@ -1,5 +1,6 @@
 # Button 按钮
 ---
+## 2.0
 <baseComponent-goTop></baseComponent-goTop>
 <baseComponent-codeBox title="按钮类型" description="按钮类型有：默认按钮、主按钮、虚线按钮、文字按钮以及四种颜色按钮。通过设置type为primary、dashed、text、info、success、warning、error创建不同样式的按钮，不设置为默认样式。" onlineLink="https://codepen.io/1011cat/pen/KjEOWO">
   <demon-mButton-type_mButton></demon-mButton-type_mButton>
