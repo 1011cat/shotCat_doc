@@ -1,2 +1,7 @@
 node_modules
-
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+build-debugger.js
+.idea
