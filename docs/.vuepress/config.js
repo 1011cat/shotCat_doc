@@ -7,6 +7,7 @@ module.exports = {
     title: 'shotCat', //标题
     description: '小源科技 平台架构公共组件', //描述
     // base: '/shotCat/', //基本url
+    dest: '../../dist',
     base: '/', //基本url
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
