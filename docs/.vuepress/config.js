@@ -121,7 +121,18 @@ module.exports = {
 
     plugins: [
       '@vuepress/back-to-top',
-      ['@vuepress/medium-zoom',{selector: 'img'}]
+      ['@vuepress/medium-zoom',{selector: 'img'}],
+      ['@vssue/vuepress-plugin-vssue',{
+        // 设置 `platform` 而不是 `api`
+        platform: 'github',
+
+        // 其他的 Vssue 配置
+        owner: '1011cat',
+        repo: 'shotCat_doc',
+        clientId: '8eb502d1ef7c8a588832',
+        clientSecret: 'd7c87b1f07e3c95e4d95479329b1d910a1cdbabc',
+        locale: 'zh',
+        baseURL: 'https://github.com'}]
     ],
 
     chainWebpack: (config, isServer) => {

@@ -30,6 +30,8 @@ title: 2.0 Button 按钮
   :tableHead = "tableHead">
 </baseComponent-apiTable>
 
+<Vssue title="Vssue Demo" />
+
 <script>
   export default {
     data() {
