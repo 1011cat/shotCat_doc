@@ -46,6 +46,7 @@ export default {
 
 <style lang="less">
 .api-wrap {
+  padding: 40px 0;
   + .api-wrap {
     margin: 40px 0;
   }

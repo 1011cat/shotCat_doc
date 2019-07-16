@@ -54,6 +54,7 @@ export default {
 
 <style lang="less" scoped>
 .code {
+  padding: 40px 0;
   .code--title {
     h2 {
       padding: 0;
@@ -85,7 +86,8 @@ export default {
     }
   }
   .code--button {
-    display: flex;
+    // display: flex;
+    position: relative;
     background: #fafbfc;
     color: #409eff;
     font-weight: 400;
@@ -96,7 +98,7 @@ export default {
       0 2px 4px 0 rgba(232, 237, 250, 0.5);
 
     .code--show {
-      flex: 9;
+      // flex: 3;
       display: flex;
       justify-content: center;
     }
@@ -104,9 +106,11 @@ export default {
       font-size: 17px;
     }
     .code--online {
-      flex: 1;
-      display: flex;
-      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-left: 5px;
+      padding-right: 25px;
     }
     .code--online:hover {
       font-size: 17px;

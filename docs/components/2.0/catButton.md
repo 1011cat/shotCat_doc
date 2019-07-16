@@ -2,20 +2,21 @@
 title: 2.0 Button 按钮
 ---
 <!-- 标题建议最大只使用h2 即##以下  -->
-![](../../.vuepress/public/logo.png)
+![](../../.vuepress/public/favicon.jpeg)
 ## 基础用法
 <baseComponent-codeBox title="基础用法" description="基础的按钮用法。" onlineLink="https://codepen.io/1011cat/pen/KjEOWO">
-  <demon-mButton-type_mButton></demon-mButton-type_mButton>
+  <demon-catButton-type_catButton></demon-catButton-type_catButton>
   <highlight-code slot="codeText" lang="vue">
     <template>
-        <m-button text="Default"></m-button>
-        <m-button text="Primary" type="primary"></m-button>
-        <m-button text="Dashed" type="dashed"></m-button>
-        <m-button text="Text" type="text"></m-button>
-        <m-button text="Info" type="info"></m-button>
-        <m-button text="Success" type="success"></m-button>
-        <m-button text="Warning" type="warning"></m-button>
-        <m-button text="Error" type="error"></m-button>
+      <div>
+        <cat-button text="default"></cat-button>
+        <cat-button text="primary" type="primary"></cat-button>
+        <cat-button text="success" type="success"></cat-button>
+        <cat-button text="info" type="info"></cat-button>
+        <cat-button text="warning" type="warning"></cat-button>
+        <cat-button text="danger" type="danger"></cat-button>
+        <cat-button text="text" type="text"></cat-button>
+      </div>
     </template>
     <script>
         export default {
@@ -29,6 +30,8 @@ title: 2.0 Button 按钮
   :tableBody = "tableBody"
   :tableHead = "tableHead">
 </baseComponent-apiTable>
+
+<baseComponent-star></baseComponent-star>
 
 <Vssue title="Vssue Demo" />
 
