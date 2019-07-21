@@ -11,6 +11,7 @@ const components = [
 Vue.use(ElementUI);
 
 const shotCat = {
+    // 必须得有install方法
     install(Vue, options) {
       Object.values(components).forEach((component) => {
         Vue.component(component.name, component)

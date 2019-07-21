@@ -1,8 +1,9 @@
+// 底部 给个star 组件 由https://codepen.io/sanzang/pen/LKvNPd 代码修改而来
 <template>
     <div class="bg" @click="starGithub" >
         <div class="word glitch">
             <div class="flash is-off">
-                <span class="text">小星星!</span>
+                <span class="text">给个star!</span>
             </div>
         </div>
     </div>
@@ -87,7 +88,7 @@ export default {
 .glitch .flash span:before,
 .glitch .flash span:after {
   display: block;
-  content: '星星!';
+  content: '给个star!';
   position: absolute;
   top: 0;
   color: #fff;

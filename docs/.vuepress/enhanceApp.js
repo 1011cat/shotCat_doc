@@ -7,17 +7,13 @@ import VueHighlightJS from 'vue-highlight.js';
 //注意： 代码块的背景色 还是由官方设置的 $codeBgColor 决定的
 import 'highlight.js/styles/atom-one-light.css';
 
-// import Element from 'element-ui'
-// import iview from 'iview'
-// import 'iview/dist/styles/iview.css';
-
 //引入自己的组件库
 import Cat from '../../src/index'
 
 //你可以在这里引入自己定义的css样式，进行修改
 // import '../.vuepress/public/css/index.css'
 
-//注意： 由于未知原因，iview不能放在下面export default里use，会失效，得单独放在外面
+//注意： 由于未知原因，如果引入的是iview不能放在下面export default里use，会失效，得单独放在外面
 // Vue.use(iview)
 
 export default ({
@@ -29,6 +25,4 @@ export default ({
   // ...做一些其他的应用级别的优化
   Vue.use(VueHighlightJS)
   Vue.use(Cat)
-  // Vue.use(Element)
-  
 }

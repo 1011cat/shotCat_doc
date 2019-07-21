@@ -1,3 +1,4 @@
+// 包裹示例组件
 <template>
   <div class="code">
     <div class="code--title">

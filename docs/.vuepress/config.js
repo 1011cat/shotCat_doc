@@ -15,7 +15,7 @@ module.exports = {
     base: '/', //基本url
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
-      ['link', { rel: 'icon', href: '/favicon.jpeg' }], // 增加一个自定义的 favicon
+      ['link', { rel: 'icon', href: '/favicon.png' }], // 增加一个自定义的 favicon
     ],
     // dest: './dist', //打包位置
     port: 6868, //端口号 谐音流弊流弊
@@ -36,7 +36,6 @@ module.exports = {
           },
           {
             text: '关于作者',
-            // 这里是下拉列表展现形式。
             items: [
               { text: 'GitHub地址', link: 'https://github.com/1011cat' }, //外部链接
               { text: '个人博客',link: 'http://shotcat.com'},
@@ -93,6 +92,11 @@ module.exports = {
                   path: 'quickStart',
                   collapsable: false, 
                 },
+                {
+                  title:'几点说明',
+                  path: 'tips',
+                  collapsable: false, 
+                }
               ]
             }
           ]
@@ -106,19 +110,27 @@ module.exports = {
     },
 
     plugins: [
+      // 官方回到顶部插件
       '@vuepress/back-to-top',
+
+      //官方图片放大组件 目前是所有img都可以点击放大。具体配置见https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-medium-zoom.html
       ['@vuepress/medium-zoom',{selector: 'img'}],
+
+      // vssue 一个借助issue的评论插件 具体配置见https://vssue.js.org/zh/
       ['@vssue/vuepress-plugin-vssue',{
-        // 设置 `platform` 而不是 `api`
+        // 设置 `platform` 而不是 `api` 我这里是在github平台
         platform: 'github',
 
-        // 其他的 Vssue 配置
-        owner: '1011cat',
-        repo: 'shotCat_doc',
-        clientId: '8eb502d1ef7c8a588832',
-        clientSecret: 'd7c87b1f07e3c95e4d95479329b1d910a1cdbabc',
-        locale: 'zh',
-        baseURL: 'https://github.com'}]
+        // owner与repo配置 https://github.com/${owner}/${repo}
+        // 例如我的仓库地址为https://github.com/1011cat/shotCat_doc 则owner为1011cat，repo为shotCat_doc
+        owner: 'your owner',
+        repo: 'your repo',
+
+        // 填写自己的OAuth App 信息。详见https://vssue.js.org/zh/options/#repo
+        clientId: 'clientId',
+        clientSecret: 'clientSecret',
+        locale: 'zh', //使用的语言  这里是简体中文
+        baseURL: 'https://github.com'}] //平台的 base URL
     ]
 
 

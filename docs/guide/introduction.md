@@ -13,11 +13,15 @@ sidebarDepth: 0  //吐槽：这里设置0无效！只能设置1或2！
 
 shotCat_doc能帮你快速构建属于自己的组件库文档，它基于vuepress实现。它仿照了element-ui文档，实现了组件展示，代码显示，在线运行，api表格展示，文档版本切换，支持评论等。它可以帮助你从0快速搭建组件文档原型，它已经默认帮你做好所有你需要的配置工作，做到真正的开箱即用。
 
+![](../.vuepress/public/doc.gif)
+
 **如果你喜欢这个项目欢迎[star!](https://github.com/1011cat/shotCat_doc)或者有任何使用问题和bug，欢迎提出[issue和pr](https://github.com/1011cat/shotCat_doc/issues)**
 
  - [Github地址](https://github.com/1011cat/shotCat_doc)
  - [演示地址](https://1011cat.github.io)
  - [我的个人博客地址：shotcat.com](http://www.shotcat.com)
  - [我的掘金账户](https://juejin.im/user/59b7940d5188257e82675bc0)
+
+ <baseComponent-star></baseComponent-star>
 
 

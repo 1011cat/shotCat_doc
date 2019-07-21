@@ -67,11 +67,11 @@ npm run dev
 
 ## 快速开始
 ### step1
-将自己的组件库放到根目录上，然后在doc/.vuepress/enhanceApp.js进行配置
+将自己的组件库放到根目录上，然后在docs/.vuepress/enhanceApp.js进行配置
 
 ::: tip
 ```js
-//doc/.vuepress/enhanceApp.js
+//docs/.vuepress/enhanceApp.js
 
 //引入你的组件库 确保你的组件库index文件有install方法
 //如果不会，没关系，src目录里自带一个简单组件库示例，可供参考
@@ -88,10 +88,10 @@ export default ({
 ```
 ::: 
 
-然后配置你的侧边栏路径，详细配置可以直接查看doc/.vuepress/components/config.js 内的注释。
+然后配置你的侧边栏路径，详细配置可以直接查看docs/.vuepress/components/config.js 内的注释。
 ::: tip
 ```js
-// doc/.vuepress/components/config.js
+// docs/.vuepress/components/config.js
 
 //这里配置的是button组件页面的路径
 sidebar:{
@@ -104,7 +104,7 @@ sidebar:{
             children: [
                 {
                     title:'Button 按钮',
-                    path: 'catButton', //在项目中对应的路径是 doc/components/2.0/catButton.md
+                    path: 'catButton', //在项目中对应的路径是 docs/components/2.0/catButton.md
                 }]
         }
     ]
@@ -118,7 +118,7 @@ sidebar:{
 
 ::: tip
 ```html
-// doc/.vuepress/components/demon/carButton.vue
+// docs/.vuepress/components/demon/catButton.vue
 
 <template>
     <!-- 注意这段代码会放入slot里，所以必须再包裹一层div，否则会解析报错 -->
@@ -143,21 +143,22 @@ sidebar:{
 
 
 ### step3
-在上面配置好的路径里doc/components/2.0/catButton.md，创建markdown文件。接着就可以愉快地编写button组件页面！
+在上面配置好的路径里docs/components/2.0/catButton.md，创建markdown文件。接着就可以愉快地编写button组件页面！
 ::: tip
-```md
-// doc/components/2.0/catButton.md
+```html
+// docs/components/2.0/catButton.md
 
 ---
 title: 2.0 Button 按钮
 ---
 
-## 基础用法
-// baseComponent-codeBox 组件即为.vuepress/components/baseComponent/codeBox文件，vuepress会默认把它解析为`baseComponent-codeBox`组件，这里我们如下对代码进行包裹，具体功能可以查看codeBox注释和页面效果
-<baseComponent-codeBox title="基础用法" description="基础的按钮用法。" onlineLink="https://codepen.io/1011cat/pen/KjEOWO">
-    //同理demon-catButton-type_catButton即为我们step2编写的示例组件
+<!-- baseComponent-codeBox 组件即为.vuepress/components/baseComponent/codeBox文件，vuepress会默认把它解析为`baseComponent-codeBox`组件，这里我们如下对代码进行包裹，具体功能可以查看codeBox注释和页面效果 -->
+<baseComponent-codeBox title="按钮类型" description="按钮类型通过设置type为primary、success、info、warning、danger、text创建不同样式的按钮，不设置为默认样式。" onlineLink="https://codepen.io/1011cat/pen/KjEOWO">
+
+    <!-- 同理demon-catButton-type_catButton即为我们step2编写的示例组件 -->
   <demon-catButton-type_catButton></demon-catButton-type_catButton>
-    //这里highlight-code为引入的第三方代码高亮组件，里面包裹的就是上面示例组件的代码
+
+    <!-- 这里highlight-code为引入的第三方代码高亮组件，里面包裹的就是上面示例组件的代码 -->
   <highlight-code slot="codeText" lang="vue">
     <template>
       <div>
@@ -177,17 +178,17 @@ title: 2.0 Button 按钮
   </highlight-code>
 </baseComponent-codeBox>
 
-// 组件的参数表格,这里我没有使用自带的markdown表格，因为太丑，样式不好修改，参数描述较少时，不能自动撑满一行，所以进行了修改；titile为表格标题，tableHead为表头，tableBody为具体参数设置
+<!-- 组件的参数表格,这里我没有使用自带的markdown表格，因为太丑，样式不好修改，有时参数描述较少时，不能自动撑满一行，所以自己写了一个组件；titile为表格标题，tableHead为表头，tableBody为具体参数设置，并且支持el-table的table参数 -->
 <baseComponent-apiTable
   title="Table Attributes"
   :tableHead = "tableHead"
   :tableBody = "tableBody">
 </baseComponent-apiTable>
 
-// Vssue为引入的评论插件
+<!-- Vssue为引入的评论插件 -->
 <Vssue title="Vssue Demo" />
 
-//其实在vuepress里的每个.md其实和.vue很像的，你基本可以按照vue组件模式来写
+<!-- 其实在vuepress里的每个.md其实和.vue很像的，你基本可以按照vue组件模式来写 -->
 <script>
     // 基本上和写vue一样
   export default {
@@ -198,7 +199,7 @@ title: 2.0 Button 按钮
             //表头为数组，其中每一项为字符串，代表每一行要展示的数据，写法也和md一样，中间以`|`间隔就行
         tableBody: [
           `size | 尺寸 | String | medium / small / mini | —`,
-          `size | 尺寸 | String | medium / small / mini | —`
+          `type |	类型 | string |	primary / success / warning / danger / info / text | —`
         ],
       }
     },
@@ -206,7 +207,7 @@ title: 2.0 Button 按钮
   }
 </script>
 
-//和vue一样，也可以设置样式，并且这里style样式只对当前md有效，不需要加上scoped。
+<!-- 和vue一样，也可以设置样式，并且这里style样式只对当前md有效，不需要加上scoped -->
 <style>
 
 </style>
@@ -214,4 +215,11 @@ title: 2.0 Button 按钮
 ```
 ::: 
 
-至此，你已经完成了一个简单的button组件展示，更详细的配置和说明都在对应代码里。每个代码文件里，都有逐行的注释及防坑说明。
+至此，你已经完成了一个简单的button组件展示，概括来说就是：
+1. 配置侧边栏导航 
+2. 写示例代码 
+3. 对应的页面md
+
+更详细的配置和说明都在对应代码里。每个代码文件里，都有逐行的注释及防坑说明。
+
+<baseComponent-star></baseComponent-star>

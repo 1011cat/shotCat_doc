@@ -1,8 +1,11 @@
+// 组件api说明 表格
 <template>
   <div class="api-wrap">
       <h3>{{title}}</h3>
       <el-table
         :data="tableData"
+        v-bind="$attrs" 
+        v-on="$listeners"
         style="width: 100%">
         <template v-for="(item, index) in tableHeader">
           <el-table-column
