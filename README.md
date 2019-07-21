@@ -17,7 +17,6 @@ shotCat_doc能帮你快速构建属于自己的组件库文档，它基于vuepre
  - [我的掘金账户](https://juejin.im/user/59b7940d5188257e82675bc0)
 
  ## 安装
-::: tip
 **克隆项目**        
 git clone https://github.com/1011cat/shotCat_doc.git
 
@@ -34,7 +33,6 @@ npm install --registry=https://registry.npm.taobao.org
 npm run dev
 
 浏览器访问 http://localhost:6868
-:::
 
 ## 项目结构目录说明
 
@@ -87,7 +85,6 @@ npm run dev
 ### step1
 将自己的组件库放到根目录上，然后在docs/.vuepress/enhanceApp.js进行配置
 
-::: tip
 ```js
 //docs/.vuepress/enhanceApp.js
 
@@ -104,10 +101,8 @@ export default ({
     Vue.use(Cat)    
   }
 ```
-::: 
 
 然后配置你的侧边栏路径，详细配置可以直接查看docs/.vuepress/components/config.js 内的注释。
-::: tip
 ```js
 // docs/.vuepress/components/config.js
 
@@ -129,12 +124,10 @@ sidebar:{
 },
 
 ```
-::: 
 
 ### step2 
 现在你已经可以开始编写自己的组件文档了，这里先编写一个组件展示示例：以我的cat-button为例
 
-::: tip
 ```html
 // docs/.vuepress/components/demon/catButton.vue
 
@@ -157,12 +150,10 @@ sidebar:{
 </script>
 
 ```
-::: 
 
 
 ### step3
 在上面配置好的路径里docs/components/2.0/catButton.md，创建markdown文件。接着就可以愉快地编写button组件页面！
-::: tip
 ```html
 // docs/components/2.0/catButton.md
 
@@ -231,7 +222,6 @@ title: 2.0 Button 按钮
 </style>
 
 ```
-::: 
 
 至此，你已经完成了一个简单的button组件展示，概括来说就是：
 1. 配置侧边栏导航 
@@ -239,7 +229,3 @@ title: 2.0 Button 按钮
 3. 对应的页面md
 
 更详细的配置和说明都在对应代码里。每个代码文件里，都有逐行的注释及防坑说明。
-
-<baseComponent-star></baseComponent-star>
-
-
