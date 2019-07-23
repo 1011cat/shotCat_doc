@@ -52,7 +52,7 @@ shotCat_doc能帮你快速构建属于自己的组件库文档，它基于vuepre
     |   |   |   |   |-- apiTable.vue    //组件的参数表格
     |   |   |   |   |-- codeBox.vue     //包裹示例的组件
     |   |   |   |   |-- star.vue    //底部彩蛋组件
-    |   |   |   |-- demon   //组件示例 
+    |   |   |   |-- demo   //组件示例 
     |   |   |       |-- catButton   //存放button组件相关示例
     |   |   |           |-- type_catButton.vue
     |   |   |-- dist    //存放打包后的文件
@@ -129,7 +129,7 @@ sidebar:{
 现在你已经可以开始编写自己的组件文档了，这里先编写一个组件展示示例：以我的cat-button为例
 
 ```html
-// docs/.vuepress/components/demon/catButton.vue
+// docs/.vuepress/components/demo/catButton.vue
 
 <template>
     <!-- 注意这段代码会放入slot里，所以必须再包裹一层div，否则会解析报错 -->
@@ -164,8 +164,8 @@ title: 2.0 Button 按钮
 <!-- baseComponent-codeBox 组件即为.vuepress/components/baseComponent/codeBox文件，vuepress会默认把它解析为`baseComponent-codeBox`组件，这里我们如下对代码进行包裹，具体功能可以查看codeBox注释和页面效果 -->
 <baseComponent-codeBox title="按钮类型" description="按钮类型通过设置type为primary、success、info、warning、danger、text创建不同样式的按钮，不设置为默认样式。" onlineLink="https://codepen.io/1011cat/pen/KjEOWO">
 
-    <!-- 同理demon-catButton-type_catButton即为我们step2编写的示例组件 -->
-  <demon-catButton-type_catButton></demon-catButton-type_catButton>
+    <!-- 同理demo-catButton-type_catButton即为我们step2编写的示例组件 -->
+  <demo-catButton-type_catButton></demo-catButton-type_catButton>
 
     <!-- 这里highlight-code为引入的第三方代码高亮组件，里面包裹的就是上面示例组件的代码 -->
   <highlight-code slot="codeText" lang="vue">
@@ -205,7 +205,7 @@ title: 2.0 Button 按钮
       return {
           //表头为字符串，写法和md一样，中间以`|`间隔就行
         tableHead:`参数 | 说明 | 类型 | 可选值 | 默认值`,
-            //表头为数组，其中每一项为字符串，代表每一行要展示的数据，写法也和md一样，中间以`|`间隔就行
+            //表格为数组，其中每一项为字符串，代表每一行要展示的数据，写法也和md一样，中间以`|`间隔就行
         tableBody: [
           `size | 尺寸 | String | medium / small / mini | —`,
           `type |	类型 | string |	primary / success / warning / danger / info / text | —`

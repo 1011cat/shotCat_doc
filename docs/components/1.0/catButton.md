@@ -5,12 +5,12 @@ title: 1.0 Button 按钮
 <!-- 说明： -->
 <!-- baseComponent-codeBox 组件即为.vuepress/components/baseComponent/codeBox文件，vuepress会默认把它解析为`baseComponent-codeBox`组件;  title为代码示例标题；description为代码示例说明；onlineLink为在线运行配置的网址 -->
 
-<!-- 同理demon-catButton-type_catButton即为编写的代码示例组件 -->
+<!-- 同理demo-catButton-type_catButton即为编写的代码示例组件 -->
 
 <!-- highlight-code为引入的第三方代码高亮组件，里面包裹的就是上面示例组件的代码 -->
 
 <baseComponent-codeBox title="按钮类型" description="按钮类型通过设置type为primary、success、info、warning、danger、text创建不同样式的按钮，不设置为默认样式。" onlineLink="https://codepen.io/1011cat/pen/KjEOWO">
-  <demon-catButton-type_catButton></demon-catButton-type_catButton>
+  <demo-catButton-type_catButton></demo-catButton-type_catButton>
   <highlight-code slot="codeText" lang="vue">
     <template>
       <div>
