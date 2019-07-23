@@ -10,14 +10,19 @@
         <slot></slot>
       </div>
     </div>
-    <div v-if="isShow" class="code--segment">
+    <div v-if="isShow"
+         class="code--segment">
       <slot name="codeText"></slot>
     </div>
-    <div v-if="$slots.codeText" class="code--button" >
-      <div @click="handleToggleShow" class="code--show">
+    <div v-if="$slots.codeText"
+         class="code--button">
+      <div @click="handleToggleShow"
+           class="code--show">
         {{codeTextBtn}}
       </div>
-      <div v-if="onlineLink" class="code--online" @click="handleOnline">
+      <div v-if="onlineLink"
+           class="code--online"
+           @click="handleOnline">
         {{codeTextBtnOnline}}
       </div>
     </div>
@@ -29,12 +34,12 @@ export default {
   props: {
     title: String,
     description: String,
-    onlineLink:{
+    onlineLink: {
       type: String,
       default: ''
     }
   },
-  data() {
+  data () {
     return {
       isShow: false,
       codeTextBtn: '显示代码',
@@ -42,11 +47,11 @@ export default {
     }
   },
   methods: {
-    handleToggleShow() {
+    handleToggleShow () {
       this.isShow = !this.isShow
       this.codeTextBtn = this.isShow ? '隐藏代码' : '显示代码'
     },
-    handleOnline() {
+    handleOnline () {
       window.open(this.onlineLink)
     }
   }
