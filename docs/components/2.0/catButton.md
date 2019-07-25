@@ -12,9 +12,9 @@ title: 2.0 Button 按钮
   description="按钮类型通过设置type为primary、success、info、warning、danger、text创建不同样式的按钮，不设置为默认样式。"
   onlineLink="https://codepen.io/1011cat/pen/KjEOWO">
   <demo-catButton-type_catButton></demo-catButton-type_catButton>
-  <!-- 这里直接设置 引入的展示代码 ；当然你也可以这里直接粘贴示例代码-->
+  <!-- 这里直接设置 引入的展示代码 ；注意引入代码一定不能缩进！！！否则不能生效！-->
   <highlight-code slot="codeText" lang="vue">
-    {{demo_type_catButton}}
+<<< @/docs/.vuepress/components/demo/catButton/type_catButton.vue
   </highlight-code>
 </baseComponent-codeBox>
 
@@ -30,14 +30,9 @@ title: 2.0 Button 按钮
 
 <!-- 其实在vuepress里的每个.md其实和.vue很像的，你基本可以按照vue组件模式来写 -->
 <script>
-  // 示例代码type_catButton 配有专门输出展示代码 则可以直接接受
-  import {demo_type_catButton} from '../../.vuepress/components/demo/catButton/type_catButton'
-
   export default {
     data() {
       return {
-        // 设置展示代码
-        demo_type_catButton: demo_type_catButton,
         //表头为字符串，写法和md一样，中间以`|`间隔就行
         tableHead: `参数 | 说明 | 类型 | 可选值 | 默认值`,
         //表格数据为数组，其中每一项为字符串，代表每一行要展示的数据，写法也和md一样，中间以`|`间隔就行

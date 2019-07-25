@@ -118,7 +118,7 @@ sidebar:{
 
 ::: tip
 ```html
-// docs/.vuepress/components/demo/catButton.vue
+// docs/.vuepress/components/demo/catButton/type_catButton.vue
 
 <template>
     <!-- 注意这段代码会放入slot里，所以必须再包裹一层div，否则会解析报错 -->
@@ -159,22 +159,9 @@ title: 2.0 Button 按钮
   <demo-catButton-type_catButton></demo-catButton-type_catButton>
 
     <!-- 这里highlight-code为引入的第三方代码高亮组件，里面包裹的就是上面示例组件的代码 -->
+    <!-- 注意引入代码一定不能缩进！！！否则不能生效！-->
   <highlight-code slot="codeText" lang="vue">
-    <template>
-      <div>
-        <cat-button text="default"></cat-button>
-        <cat-button text="primary" type="primary"></cat-button>
-        <cat-button text="success" type="success"></cat-button>
-        <cat-button text="info" type="info"></cat-button>
-        <cat-button text="warning" type="warning"></cat-button>
-        <cat-button text="danger" type="danger"></cat-button>
-        <cat-button text="text" type="text"></cat-button>
-      </div>
-    </template>
-    <script>
-        export default {
-        }
-    </script>
+<<< @/docs/.vuepress/components/demo/catButton/type_catButton.vue
   </highlight-code>
 </baseComponent-codeBox>
 
@@ -196,7 +183,7 @@ title: 2.0 Button 按钮
       return {
           //表头为字符串，写法和md一样，中间以`|`间隔就行
         tableHead:`参数 | 说明 | 类型 | 可选值 | 默认值`,
-            //表头为数组，其中每一项为字符串，代表每一行要展示的数据，写法也和md一样，中间以`|`间隔就行
+            //表格为数组，其中每一项为字符串，代表每一行要展示的数据，写法也和md一样，中间以`|`间隔就行
         tableBody: [
           `size | 尺寸 | String | medium / small / mini | —`,
           `type |	类型 | string |	primary / success / warning / danger / info / text | —`
